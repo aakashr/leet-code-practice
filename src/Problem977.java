@@ -1,7 +1,4 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.PriorityQueue;
-import java.util.Queue;
+package src;
 
 public class Problem977 {
         private static int[] sortedSquares(int[] nums) {

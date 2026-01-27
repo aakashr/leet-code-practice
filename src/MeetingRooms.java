@@ -1,3 +1,5 @@
+package src;
+
 import java.util.*;
 
 public class MeetingRooms {
@@ -9,7 +11,7 @@ public class MeetingRooms {
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         for (int i=0; i<intervals.length;i++) {
             int startTime = intervals[i][0];
-            int endTime = intervals[i][1];
+            int endTime = intervals[i][0];
             if (isRoomNeeded(curScheduled, startTime, endTime)) {
                 meetRooms++;
                 curScheduled.add(endTime);

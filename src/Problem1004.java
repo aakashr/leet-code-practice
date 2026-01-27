@@ -1,3 +1,5 @@
+package src;
+
 public class Problem1004 {
     private int longestOnes(int[] nums,int k) {
         int maxCount = 0, start = 0, end = 0, zeroCount = 0;

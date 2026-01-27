@@ -1,3 +1,5 @@
+package src;
+
 public class Problem322 {
     private int minChange(int[] coins, int target) {
         int[] dp = new int[target+1];

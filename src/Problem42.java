@@ -1,3 +1,5 @@
+package src;
+
 public class Problem42 {
         public int trap(int[] height) {
 //            int min, max = 0;
