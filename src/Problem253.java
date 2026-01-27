@@ -2,7 +2,7 @@ package src;
 
 import java.util.*;
 
-public class MeetingRooms {
+public class Problem253 {
     public int minMeetingRooms(int[][] intervals) {
         List<Integer> curScheduled = new ArrayList<>();
 //        Set<Integer> curScheduled = new HashSet<>();
@@ -33,7 +33,7 @@ public class MeetingRooms {
     }
 
     public static void main(String[] args) {
-        MeetingRooms obj = new MeetingRooms();
+        Problem253 obj = new Problem253();
         // int[][] nums = new int[][]{{0, 30}, {5, 10}, {15, 20}};
 //        int[][] nums = new int[][]{{8, 9}, {8, 9}, {1, 5}};
 //        int[][] nums = new int[][]{{7, 10}, {2, 4}};
