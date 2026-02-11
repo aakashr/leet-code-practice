@@ -5,18 +5,7 @@ import java.util.List;
 
 public class Problem230 {
     // Definition for a binary tree node.
-    public static class TreeNode {
-        int val;
-        Problem230.TreeNode left;
-        Problem230.TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, Problem230.TreeNode left, Problem230.TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+
     List<Integer> elements = new ArrayList<>();
 
     public int kthSmallest(TreeNode root, int k) {
@@ -42,10 +31,10 @@ public class Problem230 {
     public static void main(String[] args) {
         Problem230 obj = new Problem230();
 
-        Problem230.TreeNode root = new Problem230.TreeNode(4);
-        Problem230.TreeNode rootLeft = new Problem230.TreeNode(3);
-        Problem230.TreeNode rootRight = new Problem230.TreeNode(5);
-        Problem230.TreeNode rootLeftLeft = new Problem230.TreeNode(2);
+        TreeNode root = new TreeNode(4);
+        TreeNode rootLeft = new TreeNode(3);
+        TreeNode rootRight = new TreeNode(5);
+        TreeNode rootLeftLeft = new TreeNode(2);
 
         root.left = rootLeft;
         root.right = rootRight;

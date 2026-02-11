@@ -4,20 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Problem138 {
-
-// Definition for a Node.
-static class Node {
-    int val;
-    Node next;
-    Node random;
-
-    public Node(int val) {
-        this.val = val;
-        this.next = null;
-        this.random = null;
-    }
-}
-
     public Node copyRandomList(Node head) {
         Map<Node, Node> map = new HashMap<>();
 
