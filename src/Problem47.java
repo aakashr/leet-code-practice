@@ -31,7 +31,7 @@ public class Problem47 {
                 count.put(num, count.get(num) - 1);
                 dfs(nums, perm);
                 count.put(num, count.get(num) + 1);
-                perm.remove(perm.size() - 1);
+                perm.removeLast();
             }
         }
     }
