@@ -13,36 +13,26 @@ public class Problem128 {
         if (nums.length < 1) {
             return 0;
         }
-        Set<Integer> visited = new HashSet<>();
-        int j=0;
-        while (s.size() > visited.size()) {
-            int n = nums[j];
-            curMax++;
-            visited.add(n);
-            int next = n+1;
-            while (!visited.contains(next) && s.contains(next)) {
+
+        for (int n: s) {
+            if (!s.contains(n-1)) {
                 curMax++;
-                visited.add(next);
-                next = next+1;
-            }
-            int before = n-1;
-            while (!visited.contains(before) && s.contains(before)) {
-                curMax++;
-                visited.add(before);
-                before = before-1;
+                int next = n+1;
+                while(s.contains(next)) {
+                    curMax++;
+                    next++;
+                }
             }
             res = Math.max(res, curMax);
-            curMax = 0;
-            j++;
+            curMax=0;
         }
-
         return res;
     }
 
     public static void main(String[] args) {
         Problem128 obj = new Problem128();
-//        int[] nums = new int[]{0,3,2,5,4,6,1,1};
-        int[] nums = new int[]{2,20,4,10,3,4,5};
+        int[] nums = new int[]{0,3,2,5,4,6,1,1};
+//        int[] nums = new int[]{2,20,4,10,3,4,5};
         System.out.println(obj.longestConsecutive(nums));
     }
 }
