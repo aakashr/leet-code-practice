@@ -45,12 +45,20 @@ public class SortAlphaNumeric {
         return sb.toString();
     }
 
+    public void runTests(String[][] testCases) {
+        int tcNumber = 1;
+        String format = "TC#-%d\tInput-%s\tResult- %b";
+        for (String[] testCase: testCases) {
+            System.out.println(String.format(format, tcNumber++, testCase[0], sort(testCase[0]).equals(testCase[1])));
+        }
+    }
 
     public static void main(String[] args) {
         SortAlphaNumeric obj = new SortAlphaNumeric();
-
-        String input = "B3A2D0";
-//        String input = "9876543210AJIHGFEDCBA";
-        System.out.println(obj.sort(input));
+        String[][] testCases = {
+                {"B3A2D0", "A0B2D3"},
+                {"9876543210AJIHGFEDCBA", "0123456789AABCDEFGHIJ"}
+        };
+        obj.runTests(testCases);
     }
 }
